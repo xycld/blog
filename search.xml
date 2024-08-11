@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>迁移通知</title>
+      <link href="/posts/100002/"/>
+      <url>/posts/100002/</url>
+      
+        <content type="html"><![CDATA[<p>博客已从 wordpress 迁移到 hexo+gh page</p><span id="more"></span><p>之前打算用cdn加速，但是发现cloudflare的免费cdn加了不如不加</p><p>没开cloudflare代理：</p><p><img src="/images/img_8.png" alt="img_8.png" /></p><p>开了之后：</p><p><img src="/images/img_9.png" alt="img_9.png" /></p><p>所以干脆不开了</p><p>迁移部分其实大部分时间都用来写友链卡片了，其他的地方因为hexo插件很充足所以没怎么费时间</p><p>不过有一点，hexo的国际化稍微有点难搞，自带的i18n只能国际化一些组件，文章内容分不开，所以我按照网上的说法做了两份blog，用不同的url参数可以实现国际化，但是本质上是两个blog，维护起来稍微有一点麻烦</p><p>这是deploy的一键脚本(windows下使用microsoft powershell)</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> blog<span class="literal">-en</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="built_in">cp</span> ../blog<span class="literal">-en</span>/public/* ./public/en/</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>所以因为我很懒我就没做两种语言</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> announcement </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> announcement </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用python制作一个status card</title>
       <link href="/posts/100001/"/>
       <url>/posts/100001/</url>

@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.xy-cloud.xyz/posts/100002/</loc>
+    
+    <lastmod>2024-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.xy-cloud.xyz/posts/100001/</loc>
+    
+    <lastmod>2024-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.xy-cloud.xyz/posts/100002/</loc>
+    
+    <lastmod>2024-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.xy-cloud.xyz/links/index.html</loc>
     
     <lastmod>2024-08-11</lastmod>
@@ -30,24 +57,6 @@
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/tags/index.html</loc>
-    
-    <lastmod>2024-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.xy-cloud.xyz/posts/100001/</loc>
-    
-    <lastmod>2024-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.xy-cloud.xyz/posts/100002/</loc>
     
     <lastmod>2024-08-10</lastmod>
     
@@ -87,10 +96,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://hexo.xy-cloud.xyz/tags/announcement/</loc>
+    <lastmod>2024-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/categories/web/</loc>
+    <lastmod>2024-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.xy-cloud.xyz/categories/announcement/</loc>
     <lastmod>2024-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

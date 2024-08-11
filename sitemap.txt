@@ -1,11 +1,14 @@
+https://hexo.xy-cloud.xyz/posts/100002/
+https://hexo.xy-cloud.xyz/posts/100001/
+https://hexo.xy-cloud.xyz/posts/100002/
 https://hexo.xy-cloud.xyz/links/index.html
 https://hexo.xy-cloud.xyz/links/linklist.json
 https://hexo.xy-cloud.xyz/about/index.html
 https://hexo.xy-cloud.xyz/tags/index.html
-https://hexo.xy-cloud.xyz/posts/100001/
-https://hexo.xy-cloud.xyz/posts/100002/
 https://hexo.xy-cloud.xyz/categories/index.html
 https://hexo.xy-cloud.xyz/
 https://hexo.xy-cloud.xyz/tags/web/
 https://hexo.xy-cloud.xyz/tags/python/
+https://hexo.xy-cloud.xyz/tags/announcement/
 https://hexo.xy-cloud.xyz/categories/web/
+https://hexo.xy-cloud.xyz/categories/announcement/
