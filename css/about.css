@@ -1,0 +1,5 @@
+.gtext{
+    background: linear-gradient(to right, #ec65ea, #8147e7);
+    -webkit-background-clip: text;
+    color: transparent;
+}
