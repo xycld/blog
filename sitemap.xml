@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://hexo.xy-cloud.xyz/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,21 +84,21 @@
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/tags/web/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/tags/python/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/tags/announcement/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -107,14 +107,14 @@
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/categories/web/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hexo.xy-cloud.xyz/categories/announcement/</loc>
-    <lastmod>2024-08-11</lastmod>
+    <lastmod>2024-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
