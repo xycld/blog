@@ -32,8 +32,8 @@
     
     <entry>
       <title>用python制作一个status card</title>
-      <link href="/posts/100001/"/>
-      <url>/posts/100001/</url>
+      <link href="/posts/100002/"/>
+      <url>/posts/100002/</url>
       
         <content type="html"><![CDATA[<p>相信各位都使用过 GitHub Readme Stats 吧，这些类似的应用往往都是 nodejs 然后部署到 vercel 的</p><span id="more"></span><p>然而，我不会 nodejs…<br />因为 vercel 也支持 python 服务器，于是，我打算用 python 写一个<br />首先，其他的不提，这里让我做了好久的一个地方是这个圆圈</p><p><img src="/images/img_4.png" alt="img_4.png" /></p><p>我一开始只是按照 PI * 直径来更改 stroke-dashoffset</p><p><img src="/images/img_5.png" alt="img_5.png" /></p><p>但是一直不对，后来查阅资料发现还要改 stroke-dasharray</p><p><img src="/images/img_6.png" alt="img_6.png" /></p><p>至此，抄抄改改地把这个圆弄好了<br />剩下的，无非就是用 python xml 来完成我的模板</p><p><img src="/images/img_7.png" alt="img_7.png" /></p><p>这里要注意一件事，我建议先用 figma 等设计软件设计好，然后导出一个 svg，基于这个 svg，把 path 改成想要的属性就可以了<br />这是我的开源地址：<a href="https://github.com/xy-cloud-cn/ddnet-stats-card">https://github.com/xy-cloud-cn/ddnet-stats-card</a><br />其实总体来说真的没有什么难度，就是重复性的添加 xml，改 css 之类的</p>]]></content>
       
@@ -59,8 +59,8 @@
     
     <entry>
       <title>在wordpress服务器上配置uptime-kuma—apache反向代理</title>
-      <link href="/posts/100002/"/>
-      <url>/posts/100002/</url>
+      <link href="/posts/100001/"/>
+      <url>/posts/100001/</url>
       
         <content type="html"><![CDATA[<p>今天想做一个状态界面，但是踩了很多坑，写一篇 blog 记录一下</p><p>服务器环境：ubuntu20.04-apache2-wordpress</p><span id="more"></span><p>一开始，我想使用 apache 监听 80 端口，然后把 wordpress 和 uptime kuma 分别绑到 3001 和 3002</p><p>后来发现假如要改 wordpress 的端口是一件很麻烦的事 ——wordpress 能不改就不改，无数的 bug 等着你</p><p>于是，我这样编写了 apache 的配置文件</p><p><img src="/images/img.png" alt="img.png" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">ServerName xy-cloud.xyz</span><br><span class="line">DocumentRoot /var/www/html</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"></span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">ServerName status.xy-cloud.xyz</span><br><span class="line"></span><br><span class="line">ProxyPass / http://localhost:3001/</span><br><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;HTTP:Upgrade&#125; websocket [NC]</span><br><span class="line">RewriteCond %&#123;HTTP:Connection&#125; upgrade [NC]</span><br><span class="line">RewriteRule ^/?(.*) &quot;ws://localhost:3001/$1&quot; [P,L]</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure><p>至于为什么要这样写，听我细细道来</p><p>首先，毫无疑问的，为了不更改端口，我们监听 80 端口，假如是我的 blog 域名，就直接使用默认的 wordpress 路径</p><p>但是在配置 uptime kuma 的时候，我踩了很多坑</p><ol><li><p>uptime kuma 需要配置 websocket 反向代理，我一开始没有加，后来翻到 <a href="https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy">https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy</a> 这个 wiki 界面，他给出了示例，于是我就更改了配置文件成这样</p></li><li><p>不过，还没完！问题在于，我的 blog 使用了 cloudflare cdn 加速，它的设置是有一个人类验证来保护，所以 uptime kuma 访问我的 blog 会 403 错误<br />于是，我通过配置 cloudflare WAF 解决了这个问题</p></li></ol><p><img src="/images/img_1.png" alt="img_1.png" /></p><p><img src="/images/img_2.png" alt="img_2.png" /></p><p><img src="/images/img_3.png" alt="img_3.png" /></p><p>这样，我们就可以解决这个问题，原理是我的服务器 ip 访问 blog 时，跳过验证</p><p>同理，我们也可以通过这个功能，让自己也可以免于 cloudflare 的人类验证，我推荐使用请求头，然后使用 ModHeader 给自己添加一个请求头（自己设置一个密钥）</p><p>P.S. 我在这中间查资料的时候发现，这个验证会让搜索引擎的 bot 没法搜索到你！！所以要在 WAF 里加一个针对搜索引擎 bot 的跳过</p>]]></content>
       
