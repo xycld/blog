@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  <follow_challenge>
+    <feedId>83137457701576704</feedId>
+    <userId>83133458971191296</userId>
+  </follow_challenge>
   <title>xy_cloud的小窝</title>
   
   <subtitle>一个年更的鸽子窝(≧∇≦)ﾉ</subtitle>
